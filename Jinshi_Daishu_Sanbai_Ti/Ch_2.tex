@@ -8,6 +8,8 @@
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\pd}{\partial}
 \newcommand{\mr}{\mathbb{R}}
+\newcommand{\mz}{\mathbb{Z}}
+\newcommand{\mq}{\mathbb{Q}}
 
 \newtheorem{problem}{Problem}
 \numberwithin{problem}{section}
@@ -27,8 +29,17 @@
 \section{Basic Notions}
 
 \begin{problem}[Kaplansky]
-If some element in a unital ring has more than one right inverse, then it has infinitely many inverses.
+If some element in a unital ring $R$ has more than one right inverse, then it has infinitely many inverses.
 \begin{solution}
+Maybe we need first to find some examples to get a good handle of it...
+
+\begin{itemize}
+\item Suppose $R = M_n(k)$ for some field $k$.
+\end{itemize}
+
+Note that if $r q = 1$, then $r = r q r, r(1-q r) = 0$.
+
+Suppose $r q_1=1, r q_2=1$, then $r (q_1 - q_2) = 0$, and $r (q_1 + (q_1 - q_2)u) = 0$ for any $u$. We only need to find infinite $u$s such that $(q_1 - q_2)u$ are all distinctive.
 
 \end{solution}
 \end{problem}
@@ -46,5 +57,27 @@ If some element in a unital ring has more than one right inverse, then it has in
 
 \end{problem}
 
+\section{Homeomorphism Theorems for Rings}
+
+\section{Applications of Homomorphisms}
+
+\section{Various Kinds of Integral Domains}
+
+\begin{problem}
+Is $x+1$ a unit in $\mz[x]$ and $\mz[[x]]$? Is $x^2+3x+2$ irreducible in $\mz[x]$ and $\mz[[x]]$.
+\begin{solution}
+$x+1$ is not a unit in $\mz[x]$. But it's a unit in $\mz[[x]]$, and its inverse is $1-x+x^2-x^3+\cdots$.
+
+$x^2+3x+2$ is not a unit in $\mz[x]$. But it is a unit in $\mz[[x]]$ as it equals $(x+1)(x+2)$, and its inverse is $(1-x+x^2-\cdots)(1-2x+4x^2-\cdots)$.
+\end{solution}
+\end{problem}
+
+\begin{problem}
+Suppose $f(x)$ is an irreducible polynomial of odd degree in $\mq$. $\alpha$ and $\beta$ are different roots of $f(x)$ in some extension of $\mq$. Prove that $\alpha+\beta \notin \mq$.
+
+\begin{solution}
+First let's ask why odd degree? Because in even degrees $\alpha$ and $\beta$ can be congruent.
+\end{solution}
+\end{problem}
 
 \end{document}
